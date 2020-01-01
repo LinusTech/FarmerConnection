@@ -2,11 +2,11 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Country;
+use App\Header;
 use Faker\Generator as Faker;
 
-$factory->define(Country::class, function (Faker $faker) {
+$factory->define(Header::class, function (Faker $faker) {
     return [
-        'country' => $faker->country,
+        //
     ];
 });

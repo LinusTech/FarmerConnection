@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class AddressesSeeder extends Seeder
+class PostTypesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +11,6 @@ class AddressesSeeder extends Seeder
      */
     public function run()
     {
-        //
+        factory(\App\PostType::class, 5)->create();
     }
 }

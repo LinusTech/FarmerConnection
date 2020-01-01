@@ -3,6 +3,8 @@
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
 use App\Cart;
+use App\User;
+use App\Product;
 use Faker\Generator as Faker;
 
 $factory->define(Cart::class, function (Faker $faker) {

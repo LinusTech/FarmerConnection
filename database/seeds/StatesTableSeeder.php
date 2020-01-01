@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class CartsTableSeeder extends Seeder
+class StatesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +11,6 @@ class CartsTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        factory(\App\State::class, 5)->create();
     }
 }

@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class ChatSeeder extends Seeder
+class CitiesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +11,6 @@ class ChatSeeder extends Seeder
      */
     public function run()
     {
-        //
+        factory(\App\City::class, 5)->create();
     }
 }

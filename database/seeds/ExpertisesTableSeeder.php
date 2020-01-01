@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class ExpertiseSeeder extends Seeder
+class ExpertisesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.

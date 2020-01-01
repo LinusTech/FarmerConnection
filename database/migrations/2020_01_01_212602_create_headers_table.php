@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRolesTable extends Migration
+class CreateHeadersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class CreateRolesTable extends Migration
      */
     public function up()
     {
-        Schema::create('roles', function (Blueprint $table) {
+        Schema::create('headers', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('roles');
-            $table->string('display_name')->nullable();
-            $table->string('description')->nullable();
-            $table->Integer('status')->default(1);
+            $table->unsignedBigInteger('chat_id');
+            $table->string('messgae');
             $table->timestamps();
+
+            $table->foreign('chat_id')->references('id')->on('chats')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 
@@ -30,6 +30,6 @@ class CreateRolesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('roles');
+        Schema::dropIfExists('headers');
     }
 }

@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Expertise extends Model
+class PostType extends Model
 {
     protected $guarded = [];
 }

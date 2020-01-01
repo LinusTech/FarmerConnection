@@ -17,8 +17,7 @@ class CreateChatsTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('sender_id');
             $table->unsignedBigInteger('reciever_id');
-            $table->string('messgae');
-            $table->Integer('parent');
+            $table->Integer('status');
             $table->timestamps();
 
             $table->foreign('sender_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');

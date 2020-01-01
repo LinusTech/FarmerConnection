@@ -3,13 +3,17 @@
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
 use App\Profile;
+use App\User;
+use App\City;
+use App\Role;
+use App\Expertise;
 use Faker\Generator as Faker;
 
 $factory->define(Profile::class, function (Faker $faker) {
     return [
         'user_id'		=> User::all()->random()->id,
         'role_id'		=> Role::all()->random()->id,
-        //'city_id'		=> City::all()->random()->id,
+        'city_id'		=> City::all()->random()->id,
         'expertise_id'	=> Expertise::all()->random()->id,
         'mobile_number'	=> $faker->creditCardNumber,
         'image'			=> $faker->imageUrl,

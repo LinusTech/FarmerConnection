@@ -2,11 +2,11 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Country;
+use App\PostType;
 use Faker\Generator as Faker;
 
-$factory->define(Country::class, function (Faker $faker) {
+$factory->define(PostType::class, function (Faker $faker) {
     return [
-        'country' => $faker->country,
+        'post_type' => $faker->name,
     ];
 });

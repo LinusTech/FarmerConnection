@@ -9,7 +9,7 @@ $factory->define(Role::class, function (Faker $faker) {
     return [
         'roles'			=> $faker->word,
         'display_name'	=> $faker->sentence,
-    	'description'	=> $faker->text,
+    	'description'	=> $faker->sentence,
         'status'		=> $faker->numberBetween($min = 0, $max = 1),
     ];
 });
